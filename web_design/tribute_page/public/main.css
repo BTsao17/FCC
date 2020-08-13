@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+ul.list-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  max-width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -webkit-column-gap: 2.5rem;
+          column-gap: 2.5rem;
+  background: #112461;
+  padding: 3.5rem;
+}
+
+.header-container .title-margin {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.header-container .title-color,
+.header-container .quote-color {
+  color: #c9cad9;
+}
+
+.header-container .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container .nav-container a {
+  text-decoration: none;
+  color: #c9cad9;
+}
+
+#main {
+  font-family: "Raleway", sans-serif;
+  background: #fafafa;
+  max-width: 100vw;
+}
+
+.article-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  row-gap: 2rem;
+  padding: 5.25rem 3.5rem;
+}
+
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  -webkit-column-gap: 3.5rem;
+          column-gap: 3.5rem;
+}
+
+.about-container .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.about-container .image-container .image-size {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.about-container .about-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-container .about-text-container p {
+  line-height: 30px;
+}
+
+.about-container .about-text-container p:nth-child(1) {
+  margin-top: 0;
+}
+
+.about-container .about-text-container p:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.filmography-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "title title title";
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.filmography-container .filmography-heading {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  margin-bottom: 1rem;
+}
+
+.filmography-container section h3 {
+  margin: 0.5rem 0;
+}
+
+.filmography-container section table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.filmography-container section table,
+.filmography-container section th,
+.filmography-container section td {
+  border: 1px solid black;
+}
+
+.filmography-container section td {
+  padding: 0.5rem;
+}
+
+.links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.links-container li {
+  padding: 0.5rem 0;
+}
+
+.links-container li a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-container {
+  max-width: 100vw;
+  background: #112461;
+  padding: 2rem 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c9cad9;
+}
+
+.footer-container a {
+  color: #c9cad9;
+}
+
+@media (max-width: 830px) {
+  .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-container .nav-container {
+    margin-top: 1rem;
+  }
+  .about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-container .about-text-container {
+    margin-top: 2rem;
+  }
+  .filmography-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .filmography-container .filmography-heading {
+    margin-bottom: 0.5rem;
+  }
+  .filmography-container section h3 {
+    margin: 1rem 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
