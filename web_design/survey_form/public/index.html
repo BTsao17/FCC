@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Survey Form</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <script src="https://kit.fontawesome.com/c93059d984.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="header">
+    <h1 id="title">B's Art Supplies</h1>
+  </header>
+  <main id="main" class="main-container">
+    <h2 class="main-title">Survey Form</h2>
+    <p id="description" class="main-description">
+      Thank you for taking the time to help us improve our customer service!
+    </p>
+    <form id="survey-form" class="form-container">
+      <div class="input-group">
+        <label id="name-label" for="name">
+          Name
+          <span class="clue">(required)</span>
+        </label>
+        <input id="name" class="input-width" type="text" placeholder="Enter your name" required />
+      </div>
+      <div class="input-group">
+        <label id="email-label" for="email">
+          Email
+          <span class="clue">(required)</span>
+        </label>
+        <input id="email" class="input-width" type="email" placeholder="Enter your email" required />
+      </div>
+      <div class="input-group">
+        <label id="number-label" for="number">
+          Order Number
+          <span class="clue">(optional)</span>
+        </label>
+        <input id="number" class="input-width" type="number" placeholder="Enter your order number" min="1"
+          max="99999" />
+      </div>
+      <div class="input-group">
+        <p> How did you shop with us?</p>
+        <select id="dropdown" class="select-width">
+          <option disabled selected value>Select shopping experience</option>
+          <option value="in-person">In Person</option>
+          <option value="online">Online</option>
+          <option value="phone">Phone</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <p>What kinds of supplies were you looking for?
+          <span class="clue">(Check all that apply)</span>
+        </p>
+        <div class="supply-list">
+          <label class="checkbox-label">
+            <input type="checkbox" value="brushes" />
+            Brushes
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="easels" />
+            Easels
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="inks" />
+            Inks
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="markers" />
+            Markers
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="paints" />
+            Paints
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="paper" />
+            Paper Products
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="pens" />
+            Pens
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="pencils" />
+            Pencils
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" value="stamps" />
+            Stamps
+          </label>
+        </div>
+      </div>
+      <div class="input-group">
+        <p>Would you shop with us again?</p>
+        <label class="radio-label">
+          <input name="return-shopper" value="definitely" type="radio" checked />
+          Definitely
+        </label>
+        <label class="radio-label">
+          <input name="return-shopper" value="Maybe" type="radio" checked />
+          Maybe
+        </label>
+        <label class="radio-label">
+          <input name="return-shopper" value="not-sure" type="radio" checked />
+          Not Sure
+        </label>
+      </div>
+      <div class="input-group">
+        <p>Any comments or suggestions?</p>
+        <textarea id="comments" class="input-textarea" name="comment"
+          placeholder="Enter your comment here..."></textarea>
+      </div>
+      <div class="button-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </main>
+  <footer id="footer">
+    <section class="company-info">
+      <h3 class="footer-section-title">Company</h3>
+      <ul class="list-style">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </section>
+    <section class="account-info">
+      <h3 class="footer-section-title">My Account</h3>
+      <ul class="list-style">
+        <li><a href="#">My Account/Register</a></li>
+        <li><a href="#">View Cart</a></li>
+      </ul>
+    </section>
+    <section class="quick-links">
+      <h3 class="footer-section-title">Quick Links</h3>
+      <ul class="list-style">
+        <li><a href="#">All Products</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Store Info</a></li>
+      </ul>
+    </section>
+  </footer>
+</body>
+
+</html>

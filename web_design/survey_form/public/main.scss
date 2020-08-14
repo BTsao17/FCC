@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Titillium+Web:ital@0;1&display=swap");
+
+$Nunito: "Nunito Sans", sans-serif;
+$Titillium-Web: "Titillium Web", sans-serif;
+$purple: rgba(41, 0, 102, 0.85);
+$light-purple: rgba(179, 179, 255, 0.9);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0rem;
+  background: rgb(251, 247, 255);
+  font-family: $Titillium-Web;
+}
+
+header,
+footer {
+  background: linear-gradient(to right, $light-purple, $purple);
+  padding: 2.5rem;
+  font-family: $Nunito;
+}
+
+h1 {
+  margin: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.main-container {
+  padding: 2.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.main-title {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.main-description {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+//form
+p,
+label,
+button {
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
+p,
+label {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+}
+
+label .clue {
+  font-style: italic;
+}
+
+button {
+  border-radius: 0.25rem;
+  padding: 0.3rem 0.5rem;
+  min-width: 30%;
+  
+  &:hover{
+    background: $purple;
+    color: white;
+  }
+}
+
+.form-container {
+  background: $light-purple;
+  width: 60vw;
+  margin-bottom: 4rem;
+  padding: 2rem 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.select-width,
+.input-width,
+.input-textarea {
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border: 1px solid rgb(255, 255, 230);
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.select-width,
+.input-width {
+  height: 2.5rem;
+}
+
+.input-textarea {
+  height: 6rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.supply-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+}
+
+.radio-label,
+.checkbox-label {
+  align-items: center;
+}
+
+.button-group {
+  display:flex;
+  justify-content: flex-end;
+}
+
+//footer
+footer{
+  background: $purple;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.footer-section-title{
+  font-size: 1.5rem;
+   color: $light-purple;
+}
+
+.list-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: $light-purple;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
