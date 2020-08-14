@@ -13,12 +13,9 @@ ul.list-style {
 
 .header-container {
   max-width: 100vw;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
-  -webkit-column-gap: 2.5rem;
-          column-gap: 2.5rem;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 2.5rem;
   background: #112461;
   padding: 3.5rem;
 }
@@ -34,12 +31,8 @@ ul.list-style {
 }
 
 .header-container .nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .header-container .nav-container a {
@@ -54,54 +47,34 @@ ul.list-style {
 }
 
 .article-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (auto)[3];
-      grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
   row-gap: 2rem;
   padding: 5.25rem 3.5rem;
 }
 
 .about-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
-  -webkit-column-gap: 3.5rem;
-          column-gap: 3.5rem;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 3.5rem;
 }
 
 .about-container .image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
 }
 
 .about-container .image-container .image-size {
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .about-container .about-text-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-container .about-text-container p {
@@ -117,21 +90,14 @@ ul.list-style {
 }
 
 .filmography-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "title title title";
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "title title title";
+  column-gap: 2rem;
 }
 
 .filmography-container .filmography-heading {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: title;
   margin-bottom: 1rem;
 }
@@ -156,13 +122,8 @@ ul.list-style {
 }
 
 .links-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .links-container li {
@@ -178,12 +139,8 @@ ul.list-style {
   max-width: 100vw;
   background: #112461;
   padding: 2rem 3.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   color: #c9cad9;
 }
 
@@ -193,37 +150,22 @@ ul.list-style {
 
 @media (max-width: 830px) {
   .header-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .header-container .nav-container {
     margin-top: 1rem;
   }
   .about-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .about-container .about-text-container {
     margin-top: 2rem;
   }
   .filmography-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .filmography-container .filmography-heading {
     margin-bottom: 0.5rem;
