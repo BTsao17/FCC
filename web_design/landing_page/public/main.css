@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+header,
+footer {
+  background-color: #65743a;
+  color: #faf8c5;
+}
+
+main {
+  background-color: rgba(250, 248, 197, 0.4);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #faf8c5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+i {
+  font-size: 1.25rem;
+}
+
+input {
+  font-family: inherit;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.home-link {
+  max-width: 200px;
+  padding-left: 1rem;
+}
+
+.home-link .logo-img {
+  width: 100%;
+}
+
+.top-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav ul li {
+  font-size: 1.3rem;
+}
+
+.top-nav ul li:hover {
+  font-weight: 600;
+}
+
+.top-nav ul li,
+.cart-icon {
+  padding: 0.8rem 1.5rem;
+}
+
+.menu-button,
+.close-button {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .home-link {
+    padding: 0 1.5rem;
+  }
+  .menu-button {
+    display: block;
+    padding: 0 1.5rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #65743a;
+    color: #faf8c5;
+  }
+  .overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(42, 52, 26, 0.95);
+    overflow-x: hidden;
+    transition: width 0.5s ease-in;
+  }
+  .close-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #faf8c5;
+  }
+  .close-button i {
+    font-size: 2rem;
+  }
+  .top-nav {
+    display: block;
+    position: fixed;
+  }
+  .top-nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .top-nav ul li {
+    padding: 1rem;
+  }
+  .top-nav ul a {
+    font-size: 1.5rem;
+  }
+}
+
+main {
+  margin-top: 6rem;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(42, 52, 26, 0.5), rgba(35, 51, 73, 0.6)), url("https://images.unsplash.com/photo-1555236905-32b368f020af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48vw;
+}
+
+.hero-text {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #faf8c5;
+}
+
+.hero-welcome,
+.hero-company,
+.hero-subtext {
+  margin: 0;
+}
+
+.hero-welcome {
+  padding-bottom: 2rem;
+  font-size: 3.2vw;
+}
+
+.hero-company {
+  padding-bottom: 1rem;
+  font-size: 4.5vw;
+}
+
+.hero-subtext {
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+  .hero-welcome {
+    font-size: 6vw;
+    padding-bottom: 1rem;
+  }
+  .hero-company {
+    font-size: 8vw;
+  }
+  .hero-subtext {
+    font-size: 4vw;
+  }
+}
+
+.video {
+  margin: 8rem 2rem 3rem 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.iframe-container {
+  width: 60vw;
+  height: 33.75vw;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.services {
+  color: #233349;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.services-title {
+  margin: 4.5rem 1rem 1.5rem 1rem;
+  font-size: 2.25rem;
+}
+
+.services-section-container {
+  margin: 3rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+#wedding,
+#commission,
+#shop {
+  padding-top: 9rem;
+  margin-top: -6rem;
+  background-clip: content-box;
+}
+
+.figure-container {
+  display: flex;
+  margin: 0rem;
+  max-width: 600px;
+  max-height: 450px;
+}
+
+.figure-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 1.7rem;
+}
+
+.section-description {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.section-link {
+  color: #233349;
+  padding: 0.5rem;
+  border: 1px solid #233349;
+  border-radius: 0.25rem;
+}
+
+.section-link:hover {
+  text-decoration: none;
+  border-color: #65743a;
+  background-color: #65743a;
+  color: #faf8c5;
+}
+
+@media screen and (max-width: 510px) {
+  .services-section-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.instagram {
+  color: #233349;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.instagram-title {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.img-gallery {
+  margin: 3.5rem 6rem;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  column-gap: 2.5rem;
+  row-gap: 2.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.img-gallery img {
+  width: 100%;
+  object-fit: cover;
+  align-self: stretch;
+}
+
+.footer {
+  padding: 3rem 4rem;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem 1rem;
+}
+
+.footer-nav-section-title {
+  font-size: 1.4rem;
+  margin: 1rem 0rem;
+}
+
+.footer-nav a {
+  transition: all 0.05s ease-in 0s;
+}
+
+.footer-nav a:hover {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.footer-nav-social form {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+form .email-input {
+  height: 1.8rem;
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+}
+
+form .email-input:focus {
+  outline: none;
+}
+
+form .btn {
+  align-self: flex-end;
+  border-radius: 0.25rem;
+  height: 1.8rem;
+  margin-top: 0.3rem;
+  padding: 0rem 1rem;
+  font-size: 1rem;
+}
+
+form .btn:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Landing Page</title>
+  <link rel='stylesheet' type='text/css' href='main.css' />
+  <script src='https://kit.fontawesome.com/c93059d984.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+  <header id='header' class='header'>
+    <button type=button class='menu-button' onclick='openDropdown()'>
+      <span class='sr-only'>Open Menu</span>
+      <span aria-hidden='true'><i class='fas fa-bars'></i></span>
+    </button>
+    <a class='home-link' href='#'>
+      <img id='header-img' class='logo-img' src='https://i.imgur.com/mDVwGkk.png' alt='business logo' />
+    </a>
+    <nav id='nav-bar' class='top-nav'>
+      <div id='overlay' class='overlay'>
+        <button type=button class='close-button' onclick='closeDropdown()'>
+          <span class='sr-only'>Close Menu</span>
+          <span aria-hidden='true'><i class='fas fa-times'></i></span>
+        </button>
+        <ul>
+          <li><a class='nav-link' href='#wedding'>Wedding</a></li>
+          <li><a class='nav-link' href='#commission'>Commissions</a></li>
+          <li> <a class='nav-link' href='#shop'>Shop</a></li>
+          <li><a href='#'>Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <a href='#' class='cart-icon'><i class='fas fa-shopping-cart'></i></a>
+  </header>
+  <main>
+    <section class='hero-image'>
+      <div class='hero-text'>
+        <p class='hero-welcome'>WELCOME TO</p>
+        <h1 class='hero-company'>
+          Quills &amp; Inks
+        </h1>
+        <p class='hero-subtext'>Calligraphy + Creative Services</p>
+      </div>
+    </section>
+    <section class='video'>
+      <div class='iframe-container'>
+        <iframe id='video' width='560' height='315' src='https://www.youtube-nocookie.com/embed/FFnpx-u1S38'
+          frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class='services'>
+      <h2 class='services-title'> Services and Goods </h2>
+      <section id='wedding' class='services-section-container'>
+        <figure class='figure-container'>
+          <img
+            src='https://images.unsplash.com/photo-1507260259154-654940bc8f3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80'
+            alt='wedding invitation layout' />
+        </figure>
+        <div class='text-container'>
+          <h3 class='section-title'>Wedding Services</h3>
+          <p class='section-description'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus hendrerit, feugiat nisl at, aliquet
+            mi. Aliquam tempus lorem eros, vitae tristique sem rutrum quis. Nunc efficitur eros eu nisl vehicula
+            fringilla. Aenean ac dignissim velit, nec posuere tellus. Duis sollicitudin interdum elementum. Mauris
+            mollis, eros rhoncus laoreet lobortis, massa justo malesuada augue, sed vulputate metus ipsum a dolor.
+            Integer pulvinar egestas nisi, ac eleifend nulla gravida eget. Duis lobortis lobortis est, eget consequat
+            leo maximus nec.
+          </p>
+          <a href=# class='section-link'>
+            Learn More
+            <span class='sr-only'>
+              About Wedding Services Offered
+            </span>
+          </a>
+        </div>
+      </section>
+      <section id='commission' class='services-section-container'>
+        <figure class='figure-container'>
+          <img
+            src='https://images.unsplash.com/photo-1557676715-93b39337b8ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'
+            alt='calligraphy quote' />
+        </figure>
+        <div class='text-container'>
+          <h3 class='section-title'>Commissions</h3>
+          <p class='section-description'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus hendrerit, feugiat nisl at, aliquet
+            mi. Aliquam tempus lorem eros, vitae tristique sem rutrum quis. Nunc efficitur eros eu nisl vehicula
+            fringilla. Aenean ac dignissim velit, nec posuere tellus. Duis sollicitudin interdum elementum. Mauris
+            mollis, eros rhoncus laoreet lobortis, massa justo malesuada augue, sed vulputate metus ipsum a dolor.
+            Integer pulvinar egestas nisi, ac eleifend nulla gravida eget.
+          </p>
+          <a href=# class='section-link'>
+            Learn More
+            <span class='sr-only'>
+              About Calligraphy Commissions
+            </span>
+          </a>
+        </div>
+      </section>
+      <section id='shop' class='services-section-container'>
+        <figure class='figure-container'>
+          <img
+            src='https://images.unsplash.com/photo-1535381273077-21e00c27b1b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80'
+            alt='calligraphy art piece' />
+        </figure>
+        <div class='text-container'>
+          <h3 class='section-title'>Shop</h3>
+          <p class='section-description'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus hendrerit, feugiat nisl at, aliquet
+            mi. Aliquam tempus lorem eros, vitae tristique sem rutrum quis. Nunc efficitur eros eu nisl vehicula
+            fringilla. Aenean ac dignissim velit, nec posuere tellus.
+          </p>
+          <a href=# class='section-link'>
+            Go to Shop
+          </a>
+        </div>
+      </section>
+    </section>
+    <section class='instagram'>
+      <h2 class='instagram-title'>Follow Our Instagram</h2>
+      <div class='img-gallery'>
+        <a href='https://unsplash.com/photos/y_1QBZIOHNI' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1589638698095-267a00a2314a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2943&q=80'
+            alt='calligraphy example' />
+        </a>
+        <a href='https://unsplash.com/photos/Wqi8oCbohP0' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1577596396718-115e43ca8eb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=980&q=80'
+            alt='calligraphy example' />
+        </a>
+        <a href='https://unsplash.com/photos/WY9IioREIjo' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1574858742140-2996cfb6bc45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
+            alt='calligraphy example' />
+        </a>
+        <a href='https://unsplash.com/photos/9TucEPaZxok' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1564630322990-4a9e93d13946?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'
+            alt='calligraphy example' />
+        </a>
+        <a href='https://unsplash.com/photos/bCXQkRZ-LsQ' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1515159791318-cd51af6830f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
+            alt='calligraphy example' />
+        </a>
+        <a href='https://unsplash.com/photos/fMRijNMXnAU' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1542294670-01c195975f69?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'
+            alt='calligraphy example' />
+        </a>
+        <a href='https://unsplash.com/photos/YG92kOejD80' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1569929232302-7f89963ea179?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'
+            alt='calligraphy example' />
+        </a>
+        <a href='https://unsplash.com/photos/IpJCzR5r7w8' target='_blank' rel='noopener'>
+          <img
+            src='https://images.unsplash.com/photo-1543334270-305dab05a6ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80'
+            alt='calligraphy example' />
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class='footer'>
+    <nav class='footer-nav'>
+      <section class='footer-nav-info'>
+        <h4 class='footer-nav-section-title'>INFO</h4>
+        <ul>
+          <li><a href='#'>About Us</a></li>
+          <li><a href='#'>Portfolio</a></li>
+          <li><a href='#'>Shop</a></li>
+          <li><a href='#'>Commissions</a></li>
+          <li><a href='#'>Terms and Conditions</a></li>
+          <li><a href='#'>Privacy Policy</a></li>
+        </ul>
+      </section>
+      <section class='footer-nav-wedding'>
+        <h4 class='footer-nav-section-title'>WEDDING</h4>
+        <ul>
+          <li><a href='#'>Semi-custom Collection</a></li>
+          <li><a href='#'>Custom Stationery</a></li>
+          <li><a href='#'>Day of Details</a></li>
+          <li><a href='#'>Embellishments</a></li>
+          <li><a href='#'>FAQs</a></li>
+          <li><a href='#'>Guides</a></li>
+        </ul>
+      </section>
+      <section class='footer-nav-social'>
+        <h4 class='footer-nav-section-title'>SOCIAL</h4>
+        <ul>
+          <li><a href='#'>Instagram</a></li>
+          <li><a href='#'>Facebook</a></li>
+          <li><a href='#'>Pinterest</a></li>
+        </ul>
+        <form id='form' action='https://www.freecodecamp.com/email-submit'>
+          <label for='email'>
+            Sign up for our newsletter!
+          </label>
+          <input class='email-input' name='email' id='email' type='email' placeholder='Enter your email address'
+            required />
+          <input id='submit' type='submit' value='Sign Up' class='btn' />
+        </form>
+      </section>
+    </nav>
+  </footer>
+</body>
+<script type='text/javascript' src='script.js'></script>
+
+</html>
