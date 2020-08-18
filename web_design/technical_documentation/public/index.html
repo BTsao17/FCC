@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Documentation</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <script src="https://kit.fontawesome.com/c93059d984.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="grid-container">
+  <header class="primary-header">
+    <span class="logo">Learning JS</span>
+    <nav class="primary-nav">
+      <div id="overlay" class="overlay">
+        <div class="drawer-nav-top">
+          <span class="logo">Learning JS</span>
+          <button type=button class="close-button" onclick="closeDrawerNav()">
+            <span class="sr-only">Close Menu</span>
+            <span aria-hidden="true">
+              <i class="fas fa-times"></i>
+            </span>
+          </button>
+        </div>
+        <ul id="primaryNavList">
+          <li>
+            <a href="#" class="pri-nav-link">Home</a>
+          </li>
+          <li>
+            <a href="#" class="pri-nav-link">
+              Tutorials
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pri-nav-link active">
+              References
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pri-nav-link">
+              Guides
+            </a>
+          </li>
+          <li>
+            <a href="#" class="pri-nav-link">
+              Feedback
+            </a>
+          </li>
+        </ul>
+        <form class="drawer-search-form ">
+          <input class="search-bar" type="text" placeholder="Search.." required>
+          <button type="submit" class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <form class="search-form">
+      <input class="search-bar" type="text" placeholder="Search.." required>
+      <button type="submit" class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+    <button type=button class="menu-button" onclick="openDrawerNav()">
+      <span class="sr-only">Open Menu</span>
+      <span aria-hidden="true">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+  </header>
+  <nav class="secondary-nav">
+    <h2 class="page-title">References</h2>
+    <button class="secondary-nav-button collapsible">
+      <span>References</span>
+    </button>
+    <ul id="secondaryNavList" class="secondary-nav-list">
+      <li>
+        <a href="javascript:void(0)" class="sec-nav-link active">
+          Built-in objects
+        </a>
+        <ul class="nested-nav-list">
+          <li>
+            <a href="javascript:void(0)" class="nested-link active">
+              Array
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              AsyncFunction
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              Boolean
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              Date
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              Function
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              JSON
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              Math
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              NaN
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              Number
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              Object
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              Promise
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              RegEx
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="nested-link">
+              String
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="sec-nav-link">
+          Expressions &amp; operators
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="sec-nav-link">
+          Statements &amp; declarations
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="sec-nav-link">
+          Functions
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="sec-nav-link">Classes</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="sec-nav-link">Errors</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="sec-nav-link">Misc</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="body-container">
+    <main id="main-doc" class="main">
+      <h1>Array</h1>
+      <section id="Description" class="main-section">
+        <header>
+          <h2>Description</h2>
+        </header>
+        <article>
+          <p>
+            Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations.
+            Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length
+            can change at any time, and data can be stored at non-contiguous locations in the array, JavaScript arrays
+            are not guaranteed to be dense; this depends on how the programmer chooses to use them. In general, these
+            are convenient characteristics; but if these features are not desirable for your particular use, you might
+            consider using typed arrays.
+          </p>
+          <p>
+            Arrays cannot use strings as element indexes (as in an associative array) but must use integers. Setting or
+            accessing via non-integers using bracket notation (or dot notation) will not set or retrieve an element from
+            the array list itself, but will set or access a variable associated with that array's object property
+            collection. The array's object properties and list of array elements are separate, and the array's traversal
+            and mutation operations cannot be applied to these named properties.
+          </p>
+          <section>
+            <header>
+              <h3>Common Operations</h3>
+            </header>
+            <ul id=commonOperationsList>
+              <li>
+                <p>Create an array</p>
+                <code>let fruits = ['Apple', 'Banana'];
+                  console.log(fruits.length);
+                  //2
+                </code>
+              </li>
+              <li>
+                <p>Access an Array using the index position</p>
+                <code>let first = fruits[0];
+                  //Apple
+
+                  let last = fruits[fruits.length-1];
+                  //Banana
+                </code>
+              </li>
+              <li>
+                <p>Loop over an Array</p>
+                <code>fruits.forEach(function(item, index, array) {
+                  console.log(item, index);
+                  });
+                  // Apple 0
+                  // Banana 1
+                </code>
+              </li>
+              <li>
+                <p>Add an item to the end of an Array</p>
+                <code>let newLength = fruits.push('Orange');
+                  // ["Apple", "Banana", "Orange"]
+                </code>
+              </li>
+              <li>
+                <p>Remove an item from the end of an Array</p>
+                <code>let last = fruits.pop(); // remove Orange (from the end)
+                  // ["Apple", "Banana"]
+                </code>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <header>
+              <h3>Accessing array elements</h3>
+            </header>
+            <p>
+              JavaScript arrays are zero-indexed: the first element of an array is at index 0, and the last element is
+              at the index equal to the value of the array's length property minus 1.
+            </p>
+            <p>
+              Using an invalid index number returns undefined.
+            </p>
+            <code>let arr = ['this is the first element', 'this is the second element', 'this is the last element'];
+              console.log(arr[0]); // logs 'this is the first element'
+              console.log(arr[1]); // logs 'this is the second element'
+              console.log(arr[arr.length - 1]); // logs 'this is the last element'
+            </code>
+            <p>
+              Array elements are object properties in the same way that toString is a property (to be specific, however,
+              toString() is a method). Nevertheless, trying to access an element of an array as follows throws a syntax
+              error because the property name is not valid:
+            </p>
+            <code>console.log(arr.0); // a syntax error</code>
+            <p>
+              There is nothing special about JavaScript arrays and the properties that cause this. JavaScript properties
+              that begin with a digit cannot be referenced with dot notation and must be accessed using bracket
+              notation.
+            </p>
+            <p>
+              For example, if you had an object with a property named '3d', it can only be referenced using bracket
+              notation.
+            </p>
+            <code>let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
+              console.log(years.0) // a syntax error
+              console.log(years[0]) // works properly
+            </code>
+            <code>renderer.3d.setTexture(model, 'character.png') // a syntax error
+              renderer['3d'].setTexture(model, 'character.png') // works properly
+            </code>
+            <p>
+              Note that in the 3d example, '3d' had to be quoted. It's possible to quote the JavaScript array indexes as
+              well (e.g., years['2'] instead of years[2]), although it's not necessary.
+            </p>
+            <p>
+              The 2 in years[2] is coerced into a string by the JavaScript engine through an implicit toString
+              conversion. As a result, '2' and '02' would refer to two different slots on the years object, and the
+              following example could be true:
+            </p>
+            <code>console.log(years['2'] != years['02']);</code>
+          </section>
+          <section>
+            <header>
+              <h3>Relationship between length and numerical properties</h3>
+            </header>
+            <p>
+              A JavaScript array's length property and numerical properties are connected.
+            </p>
+            <p>
+              Several of the built-in array methods (e.g., join(), slice(), indexOf(), etc.) take into account the value
+              of an array's length property when they're called.
+            </p>
+            <p>
+              Other methods (e.g., push(), splice(), etc.) also result in updates to an array's length property.
+            </p>
+            <code>const fruits = []
+              fruits.push('banana', 'apple', 'peach')
+              console.log(fruits.length) // 3
+            </code>
+            <p>
+              When setting a property on a JavaScript array when the property is a valid array index and that index is
+              outside the current bounds of the array, the engine will update the array's length property accordingly:
+            </p>
+            <code>fruits[5] = 'mango'
+              console.log(fruits[5]) // 'mango'
+              console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
+              console.log(fruits.length) // 6
+            </code>
+            <p>Increasing the length.</p>
+            <code>fruits.length = 10
+              console.log(fruits) // ['banana', 'apple', 'peach', &lt;7 empty items &gt;]
+              console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
+              console.log(fruits.length) // 10
+              console.log(fruits[8]) // undefined
+            </code>
+            <p>
+              Decreasing the length property does, however, delete elements.
+            </p>
+            <code>fruits.length = 2
+              console.log(Object.keys(fruits)) // ['0', '1']
+              console.log(fruits.length) // 2
+            </code>
+          </section>
+        </article>
+      </section>
+      <section id="Constructor" class="main-section">
+        <header>
+          <h2>Constructor</h2>
+        </header>
+        <article>
+          <dl>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array ()</code>
+              </a>
+            </dt>
+            <dd>
+              Creates a new Array object.
+            </dd>
+          </dl>
+        </article>
+      </section>
+      <section id="Static_Properties" class="main-section">
+        <header>
+          <h2>Static Properties</h2>
+        </header>
+        <article>
+          <dl>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array [@@species]</code>
+              </a>
+            </dt>
+            <dd>The constructor function is used to create derived objects.</dd>
+          </dl>
+        </article>
+      </section>
+      <section id="Static_Methods" class="main-section">
+        <header>
+          <h2>Static Methods</h2>
+        </header>
+        <article>
+          <dl>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.from()</code>
+              </a>
+            </dt>
+            <dd>
+              Creates a new Array instance from arrayLike, an array-like or iterable object.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.isArray()</code>
+              </a>
+            </dt>
+            <dd>
+              Returns true if value is an array, or false otherwise.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.of()</code>
+              </a>
+            </dt>
+            <dd>
+              Creates a new Array instance with a variable number of arguments, regardless of number or type of the
+              arguments.
+            </dd>
+          </dl>
+        </article>
+      </section>
+      <section id="Instance_Properties" class="main-section">
+        <header>
+          <h2>Instance Properties</h2>
+        </header>
+        <article>
+          <dl>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.length</code>
+              </a>
+            </dt>
+            <dd>Reflects the number of elements in an array.</dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype[@@unscopables]</code>
+              </a>
+            </dt>
+            <dd>
+              A symbol containing property names to exclude from a with binding scope.
+            </dd>
+          </dl>
+        </article>
+      </section>
+      <section id="Instance_Methods" class="main-section">
+        <header>
+          <h2>Instance Methods</h2>
+        </header>
+        <article>
+          <dl>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.concat()</code>
+              </a>
+            </dt>
+            <dd>
+              Returns a new array that is this array joined with other arrys(s) and/or value(s).
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.every()</code>
+              </a>
+            </dt>
+            <dd>
+              Returns true if every element in this array satisfies the testing callbackFn.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.filter()</code>
+              </a>
+            </dt>
+            <dd>
+              Returns a new array containing all elements of the calling array for which the provided filtering
+              callbackFn returns true.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.find()</code>
+              </a>
+            </dt>
+            <dd>
+              Returns the found element in the array, if some element in the array satisfies the testing callbackFn, or
+              undefined if not found.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.forEach()</code>
+              </a>
+            </dt>
+            <dd>Calls a callbackFn for each element in the array.</dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.join()</code>
+              </a>
+            </dt>
+            <dd>Joins all elements of an array into a string.</dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.keys()</code>
+              </a>
+            </dt>
+            <dd>
+              Returns a new Array Iterator that contains the keys for each index in the array.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.map()</code>
+              </a>
+            </dt>
+            <dd>
+              Returns a new array containing the results of calling callbackFn on every element in this array.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.pop()</code>
+              </a>
+            </dt>
+            <dd>Removes the last element from an array and returns that element.</dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.push()</code>
+              </a>
+            </dt>
+            <dd>
+              Adds one or more elements to the end of an array, and returns the new length of the array.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.protypte.reduce()</code>
+              </a>
+            </dt>
+            <dd>
+              Apply a callbackFn against an accumulator and each value of the array (from left-to-right) as to reduce it
+              to a single value.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.shift()</code>
+              </a>
+            </dt>
+            <dd>
+              Removes the first element from an array and returns that element.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.slice()</code>
+              </a>
+            </dt>
+            <dd>
+              Extracts a section of the calling array and returns a new array.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.sort()</code>
+              </a>
+            </dt>
+            <dd>
+              Sorts the elements of an array in place and returns the array.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.splice()</code>
+              </a>
+            </dt>
+            <dd>
+              Adds and/or removes elements from an array.
+            </dd>
+            <dt>
+              <a href="javascript:void(0)">
+                <code>Array.prototype.unshift()</code>
+              </a>
+            </dt>
+            <dd>
+              Adds one or more elements to the front of an array, and returns the new length of the array.
+            </dd>
+          </dl>
+        </article>
+      </section>
+    </main>
+    <nav id="navbar" class="main-nav">
+      <header>
+        <h3>On This Page</h3>
+      </header>
+      <button class="main-nav-button collapsible">
+        <span>On This Page</span>
+      </button>
+      <ul class="main-nav-list">
+        <li>
+          <a href="#Description" class="nav-link">
+            Description
+          </a>
+        </li>
+        <li>
+          <a href="#Constructor" class="nav-link">
+            Constructor
+          </a>
+        </li>
+        <li>
+          <a href="#Static_Properties" class="nav-link">
+            Static Properties
+          </a>
+        </li>
+        <li>
+          <a href="#Static_Methods" class="nav-link">
+            Static Methods
+          </a>
+        </li>
+        <li>
+          <a href="#Instance_Properties" class="nav-link">
+            Instance Properties
+          </a>
+        </li>
+        <li>
+          <a href="#Instance_Methods" class="nav-link">
+            Instance Methods
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <footer class="footer">
+    <p>All the documentation on this page is taken from <span><a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank"
+          rel="noopener noreferrer">MDN</a></span>.
+    </p>
+  </footer>
+  <script type='text/javascript' src='script.js'></script>
+</body>
+
+</html>
